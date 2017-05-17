@@ -6,8 +6,9 @@ import java.util.List;
 import com.ubs.checkout.model.Product;
 
 public interface CheckoutService {
-	
-	BigDecimal getTotalPrice(List<Product> products);
-	BigDecimal getUnitPriceOfProduct(Product product);
+
+    BigDecimal getTotalPrice(List<Product> products);
+
+    BigDecimal getUnitPriceOfProduct(Product product);
 
 }
