@@ -1,5 +1,7 @@
 package com.ubs.checkout.services.impl;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,6 @@ import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.ubs.checkout.model.Product;
-import com.ubs.checkout.services.CheckoutService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CheckoutServiceImplTest {
@@ -20,7 +21,7 @@ public class CheckoutServiceImplTest {
     private static Integer TEST_UNIT_PRICE = 3;
 
     @InjectMocks
-    private CheckoutService checkoutService;
+    private CheckoutServiceImpl checkoutService;
 
     @Test(expected = Exception.class)
     public void getTotalPriceForNullProductsShouldReturnExceptionTest() throws Exception {
